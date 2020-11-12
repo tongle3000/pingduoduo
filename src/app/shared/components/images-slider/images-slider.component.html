@@ -1,5 +1,5 @@
-<div class="container" [ngStyle]="{'height':sliderHeight}">
-  <div class="images-slider" (scroll)="handleScroll($event)" #imagesSlider>
+<div class="container">
+  <div class="images-slider" (scroll)="handleScroll($event)" #imagesSlider  [ngStyle]="{'height':sliderHeight}">
     <!-- 3-4 #img -->
     <img #img *ngFor="let slider of sliders" [src]="slider.imgUrl" [alt]="slider.caption" />
   </div>

@@ -1,17 +1,17 @@
-
 import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
   Component,
-  OnInit,
-  Input,
-  ViewChild,
   ElementRef,
-  ViewChildren,
+  Input,
+  OnDestroy,
+  OnInit,
   QueryList,
   Renderer2,
-  AfterViewInit,
-  OnDestroy,
-  ChangeDetectionStrategy
+  ViewChild,
+  ViewChildren,
 } from '@angular/core';
+
 
 
 export interface ImagesSlider {

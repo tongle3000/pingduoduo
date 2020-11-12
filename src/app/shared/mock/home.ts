@@ -1,28 +1,28 @@
-import { ImagesSlider, Channel, TopMenu, Ad, Product } from '../components';
+import { Ad, Channel, ImagesSlider, Product, TopMenu } from '../components';
 
 
 export const imagesSliders: ImagesSlider[] = [{
   id: 1,
-  imgUrl: 'https://upload-images.jianshu.io/upload_images/16623634-dd2b82b615b125ae?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240',
+  imgUrl: 'https://i3.meishichina.com/attachment/magic/2020/08/11/2020081115971110567848197577.jpg',
   link: '',
   caption: '',
   productVariantId: 1
 }, {
   id: 2,
-  imgUrl: 'https://upload-images.jianshu.io/upload_images/535767-622a91a25c630eeb.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240',
+  imgUrl: 'https://i3.meishichina.com/attachment/mofang/2019/12/17/20191217157657460023710138013.jpg',
   link: '',
   caption: '',
   productVariantId: 2
 },
 {
   id: 3,
-  imgUrl: 'https://upload-images.jianshu.io/upload_images/9070317-20250d650a0a267c.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240',
+  imgUrl: 'https://i3.meishichina.com/attachment/mofang/2020/01/02/20200102157795273065710169539.jpg',
   link: '',
   caption: '',
   productVariantId: 3
 }, {
   id: 4,
-  imgUrl: 'https://upload-images.jianshu.io/upload_images/15684874-6c727205351c7835.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240',
+  imgUrl: 'https://i3.meishichina.com/attachment/mofang/2020/01/09/20200109157855766962210169539.jpg',
   link: '',
   caption: '',
   productVariantId: 4
@@ -152,20 +152,20 @@ export const topMenus: TopMenu[] = [
 // 6-4 ② rxjs 广告为
 export const ads: Ad[] = [{
   // tslint:disable-next-line:max-line-length
-  imageUrl: 'https://upload-images.jianshu.io/upload_images/9602437-9c114509e9821178.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/160/h/160/format/webp',
+  imageUrl: 'https://i3.meishichina.com/attachment/magic/2020/08/11/2020081115971110567848197577.jpg',
   link: '',
   categories: ['appliance', 'department', 'cars', 'fruits', 'underwears']
 }, {
-  imageUrl: 'https://upload-images.jianshu.io/upload_images/535767-622a91a25c630eeb.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240',
+  imageUrl: 'https://i8.meishichina.com/attachment/recipe/2020/11/12/20201112160514946481369010454906.JPG?x-oss-process=style/p800',
   link: '',
   categories: ['appliance', 'department', 'cars', 'fruits', 'underwears']
 },
 {
-  imageUrl: 'https://upload-images.jianshu.io/upload_images/9070317-20250d650a0a267c.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240',
+  imageUrl: 'https://i8.meishichina.com/attachment/recipe/2020/11/12/20201112160514946481369010454906.JPG?x-oss-process=style/p800',
   link: '',
   categories: ['appliance', 'department', 'cars', 'fruits', 'underwears']
 }, {
-  imageUrl: 'https://upload-images.jianshu.io/upload_images/15684874-6c727205351c7835.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240',
+  imageUrl: 'https://i8.meishichina.com/attachment/recipe/2020/11/12/20201112160514946481369010454906.JPG?x-oss-process=style/p800',
   link: '',
   categories: ['appliance', 'department', 'cars', 'fruits', 'underwears']
 }];
@@ -176,56 +176,56 @@ export const products: Product[] = [
   {
     id: 1,
     title: 'JEEP/吉普加绒牛仔裤吉普加绒牛仔裤吉普加绒牛仔裤',
-    imageUrl: 'https://upload-images.jianshu.io/upload_images/18428859-36813934492261df.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240',
+    imageUrl: 'https://i3.meishichina.com/attachment/recipe/2020/11/12/2020111216051448652178197577.jpg?x-oss-process=style/c320',
     tags: ['小编推荐', '退货包运费'],
     price: 99,
     priceDesc: '已拼10万+件',
-    buyerAvatars: ['https://upload-images.jianshu.io/upload_images/1202579-02278d315cafa314?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240', 'https://upload-images.jianshu.io/upload_images/16623634-dd2b82b615b125ae?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240']
+    buyerAvatars: ['https://i3.meishichina.com/attachment/recipe/2020/11/12/2020111216051448652178197577.jpg?x-oss-process=style/c320', 'https://i8.meishichina.com/attachment/recipe/2020/11/12/20201112160514946481369010454906.JPG?x-oss-process=style/p800']
   },
   {
     id: 2,
     title: '海南仙人果',
-    imageUrl: 'https://upload-images.jianshu.io/upload_images/2100084-94e18c36bdd93648?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240',
+    imageUrl: 'https://i3.meishichina.com/attachment/recipe/2020/11/12/2020111216051479717048197577.jpg?x-oss-process=style/c320',
     tags: ['急速退款', '坏果包赔'],
     price: 39,
     priceDesc: '已拼3.3万+件',
-    buyerAvatars: ['https://upload-images.jianshu.io/upload_images/16623634-dd2b82b615b125ae?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240', 'https://upload-images.jianshu.io/upload_images/1202579-02278d315cafa314?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240']
+    buyerAvatars: ['https://i8.meishichina.com/attachment/recipe/2020/11/12/20201112160514946481369010454906.JPG?x-oss-process=style/p800', 'https://i3.meishichina.com/attachment/recipe/2020/11/12/2020111216051448652178197577.jpg?x-oss-process=style/c320']
   },
   {
     id: 3,
     title: '江西赣州脐橙',
-    imageUrl: 'https://upload-images.jianshu.io/upload_images/9070317-20250d650a0a267c.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240',
+    imageUrl: 'https://i3.meishichina.com/attachment/recipe/2020/11/12/2020111216051479717048197577.jpg?x-oss-process=style/c320',
     tags: ['满30返5', '急速退款', '坏果包赔'],
     price: 50,
     priceDesc: '已拼10万+件',
-    buyerAvatars: ['https://upload-images.jianshu.io/upload_images/1202579-02278d315cafa314?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240', 'https://upload-images.jianshu.io/upload_images/16623634-dd2b82b615b125ae?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240']
+    buyerAvatars: ['https://i3.meishichina.com/attachment/recipe/2020/11/12/2020111216051448652178197577.jpg?x-oss-process=style/c320', 'https://i8.meishichina.com/attachment/recipe/2020/11/12/20201112160514946481369010454906.JPG?x-oss-process=style/p800']
   },
   {
     id: 4,
     title: 'JEEP/吉普加绒牛仔裤吉普加绒牛仔裤吉普加绒牛仔裤',
-    imageUrl: 'https://upload-images.jianshu.io/upload_images/18428859-36813934492261df.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240',
+    imageUrl: 'https://i3.meishichina.com/attachment/recipe/2020/11/12/2020111216051479717048197577.jpg?x-oss-process=style/c320',
     tags: ['小编推荐', '退货包运费'],
     price: 99,
     priceDesc: '已拼10万+件',
-    buyerAvatars: ['https://upload-images.jianshu.io/upload_images/1202579-02278d315cafa314?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240', 'https://upload-images.jianshu.io/upload_images/16623634-dd2b82b615b125ae?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240']
+    buyerAvatars: ['https://i3.meishichina.com/attachment/recipe/2020/11/12/2020111216051448652178197577.jpg?x-oss-process=style/c320', 'https://i8.meishichina.com/attachment/recipe/2020/11/12/20201112160514946481369010454906.JPG?x-oss-process=style/p800']
   },
   {
     id: 5,
     title: '海南仙人果',
-    imageUrl: 'https://upload-images.jianshu.io/upload_images/2100084-94e18c36bdd93648?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240',
+    imageUrl: 'https://i3.meishichina.com/attachment/recipe/2020/11/12/2020111216051479717048197577.jpg?x-oss-process=style/c320',
     tags: ['急速退款', '坏果包赔'],
     price: 39,
     priceDesc: '已拼3.3万+件',
-    buyerAvatars: ['https://upload-images.jianshu.io/upload_images/16623634-dd2b82b615b125ae?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240', 'https://upload-images.jianshu.io/upload_images/1202579-02278d315cafa314?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240']
+    buyerAvatars: ['https://i8.meishichina.com/attachment/recipe/2020/11/12/20201112160514946481369010454906.JPG?x-oss-process=style/p800', 'https://i3.meishichina.com/attachment/recipe/2020/11/12/2020111216051448652178197577.jpg?x-oss-process=style/c320']
   },
   {
     id: 6,
     title: '江西赣州脐橙',
-    imageUrl: 'https://upload-images.jianshu.io/upload_images/9070317-20250d650a0a267c.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240',
+    imageUrl: 'https://i3.meishichina.com/attachment/recipe/2020/11/12/2020111216051479717048197577.jpg?x-oss-process=style/c320',
     tags: ['满30返5', '急速退款', '坏果包赔'],
     price: 50,
     priceDesc: '已拼10万+件',
-    buyerAvatars: ['https://upload-images.jianshu.io/upload_images/1202579-02278d315cafa314?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240', 'https://upload-images.jianshu.io/upload_images/16623634-dd2b82b615b125ae?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240']
+    buyerAvatars: ['https://i3.meishichina.com/attachment/recipe/2020/11/12/2020111216051448652178197577.jpg?x-oss-process=style/c320', 'https://i8.meishichina.com/attachment/recipe/2020/11/12/20201112160514946481369010454906.JPG?x-oss-process=style/p800']
   }
 ];
 

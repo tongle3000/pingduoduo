@@ -1,4 +1,4 @@
-import { ProductVariant } from '../../product/domain/index';
+import { ProductVariant } from '../../product/domain';
 
 export const productVariants: ProductVariant[] = [
     {
@@ -10,13 +10,13 @@ export const productVariants: ProductVariant[] = [
         productVariantImages: [
             {
                 id: 1,
-                imgUrl: 'https://upload-images.jianshu.io/upload_images/18428859-36813934492261df.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240',
+                imgUrl: 'https://i8.meishichina.com/attachment/recipe/2020/11/05/20201105160456160474596710454906.JPG?x-oss-process=style/p800',
                 link: '',
                 caption: '',
                 productVariantId: 1
             }, {
                 id: 2,
-                imgUrl: 'https://upload-images.jianshu.io/upload_images/535767-622a91a25c630eeb.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/360/h/240',
+                imgUrl: 'https://i8.meishichina.com/attachment/recipe/2020/11/05/20201105160456160474596710454906.JPG?x-oss-process=style/p800',
                 link: '',
                 caption: '',
                 productVariantId: 2
