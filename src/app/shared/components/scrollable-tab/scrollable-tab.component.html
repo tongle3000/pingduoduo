@@ -1,0 +1,18 @@
+<ul class="touch-scroll" [ngStyle]="{'background-color':backgroundColor}">
+  <li *ngFor="let menu of menus; let i = index;">
+    <!-- [href]=" menu.link" -->
+    <a [ngStyle]="{color:menu.link === selectedTabLink ? titleActiveColor : titleColor}" (click)="handleSelected(i)">
+      <!-- <a (click)="handleSelected(i)"> -->
+      {{ menu.title }}
+    </a>
+    <!-- <span class="indicator" *ngIf="i === selectedIndex"></span> -->
+    <!-- // 6-3 解决刷新后，顶部的按钮没由显示当前的问题。 -->
+    <span class="indicator" [ngStyle]="{'background-color':indicatorColor}"
+      *ngIf="menu.link === selectedTabLink"></span>
+
+  </li>
+</ul>
+<!-- <ng-content></ng-content> -->
+
+<!-- [class.active]="i === selectedIndex" -->
+<!--  let f= first  [class.first]="f" -->

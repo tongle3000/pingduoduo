@@ -1,0 +1,64 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex: 1;
+}
+
+.subfooter {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 36% 64%;
+  grid-gap: 0;
+  grid-template-areas: 'menus btns';
+  place-content: stretch;
+  place-items: stretch;
+  margin: 0;
+  /* padding: 10px 0; */
+  background-color: #fff;
+}
+
+
+.subfooter .menus {
+  grid-area: menus;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 0;
+  grid-template-areas: 'more favorite service';
+  place-content: stretch;
+  place-items: stretch;
+  padding: 8px 0 9px;
+  border-top: 1px solid #eee;
+}
+
+.btns {
+  grid-area: btns;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 0;
+  grid-template-areas: 'zhijie pindan';
+  place-content: stretch;
+  place-items: stretch;
+
+}
+
+.btns .btn {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  place-content: stretch;
+  place-items: stretch;
+  text-align: center;
+
+}
+
+.price {
+  font-size: 1.2rem;
+  padding: 3px 0 0;
+}
+
+.buy {
+  font-size: 1rem;
+  padding: 0 0 5px;
+}

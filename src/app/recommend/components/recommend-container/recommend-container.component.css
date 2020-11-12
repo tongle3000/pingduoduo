@@ -1,0 +1,33 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex: 1;
+}
+
+.main {
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  /* height: 3rem; */
+  /* height: calc(100% - 3rem); 这里讲的跟视频里不一样。*/
+  height: 1rem;
+  /* 这个必须赋一个值。不能太大，不然不能滚动。*/
+  /* background-color: yellow; */
+}
+
+
+.ad-container {
+  padding: 0 0.5rem;
+  background-color: transparent;
+  height: 8rem;
+  overflow: hidden;
+  margin: 5px 0;
+}
+
+.ad-image {
+  width: 100%;
+  object-fit: contain;
+}

@@ -78,7 +78,7 @@
     ],
     "quotemark": [
       true,
-      "single"
+      "single" // 单引号。
     ],
     "semicolon": {
       "options": [
@@ -95,8 +95,7 @@
       }
     },
     "typedef-whitespace": {
-      "options": [
-        {
+      "options": [{
           "call-signature": "nospace",
           "index-signature": "nospace",
           "parameter": "nospace",

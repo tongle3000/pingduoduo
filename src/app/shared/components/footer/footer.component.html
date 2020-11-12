@@ -1,0 +1,19 @@
+<!-- 这块 的图片，不是从网上取来的，是固定的。 所以这里不用 流 " | async" 如：*ngFor="let item of channels$ | async"  -->
+<!--   
+  horizontal-garid组件里，有定义 显示列数  和总列说。当她们相等，就不会有滚动条scrollable。
+  所以下面我们设置 [cols]="5" [displayCols]="5"
+  public get scrollable(): boolean {
+    return this.cols > this.displayCols;
+  } 
+  tabItems,  这里要构建一个固定数组。(不明白为什么不能直接放在这个组件里。)
+  shared 新建个文件夹 domain
+-->
+
+
+<app-horizontal-grid [cols]="5" [displayCols]="5">
+  <div appGridItem *ngFor="let item of tabItems; let idx=index">
+    <img [src]="idx === selectedIndex ? item.selectedIcon : item.icon" alt="{{item.title}}" [appGridItemIcon]="'1.5rem'"
+      (click)="toggleSelectedTab(idx)" />
+    <span [appGridItemTitle]="'0.5rem'">{{ item.title }}</span>
+  </div>
+</app-horizontal-grid>

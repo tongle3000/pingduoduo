@@ -1,0 +1,14 @@
+.grid-content {
+  background-color: transparent;
+  padding: 5px 0;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  display: grid;
+  grid-auto-rows: row;
+  /* 有溢出换一行 */
+  place-content: stretch;
+  place-content: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+}

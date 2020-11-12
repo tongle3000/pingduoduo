@@ -1,0 +1,23 @@
+.active {
+  background-color: red;
+}
+
+/* :host {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex: 1;
+} */
+
+.ad-container {
+  padding: 0 0.5rem;
+  background-color: transparent;
+  height: 8rem;
+  overflow: hidden;
+  margin: 5px 0;
+}
+
+.ad-image {
+  width: 100%;
+  object-fit: contain;
+}

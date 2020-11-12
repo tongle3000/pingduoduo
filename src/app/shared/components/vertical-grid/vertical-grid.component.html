@@ -1,0 +1,10 @@
+<!-- 这个组件，其实是个容器组件，我们并不关心里面到底是什么 -->
+
+<div class="grid-content" [ngStyle]="{
+    'grid-template-rows': templateRows,
+    'grid-template-columns': templateColumns,
+    'grid-gap': gridGap
+  }">
+  <ng-content>
+  </ng-content>
+</div>

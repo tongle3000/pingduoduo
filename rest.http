@@ -1,0 +1,52 @@
+
+@baseUrl=http://localhost:4200
+
+###
+GET http://localhost:420
+
+
+
+###
+POST {{baseUrl}}/posts
+Content-Type: application/json
+
+{
+    "title": "1111",
+    "body": "这是个测试内容",
+    "userId": 1
+}
+
+###
+PUT {{baseUrl}}/posts/1
+Content-Type: application/json
+
+{
+    "title": "修改id为 1 的数据.",
+    "body": "这是个测试内容,",
+    "userId": 1
+}
+
+###
+DELETE {{baseUrl}}/posts/1
+
+// 我们这里没有慕课网的 iCode
+###
+GET {{host}}/banners?icode={{iCode}} 
+//上面时取到轮播图的数据.
+// 这里的 host 是在 settings.json 文件 的 "rest-client.environmentVariables":属性定义了
+// "imooc": { "host": "http://apis.imooc.com/api" }
+
+###
+GET {{host}}/tabs?icode={{iCode}} // 顶部 tab 按钮数据
+
+###
+GET {{host}}/channels?icode={{iCode}} // 网格频道菜单数据.
+
+###
+GET {{host}}/ads?categories_like=men&icode={{iCode}} // 广告图。
+
+###
+GET {{host}}/products?categories_like=men&icode={{iCode}} // 产品列表页。
+
+###
+GET {{host}}/productVariants?_expand=product&_embed=productVariantImages&productId=1&icode={{iCode}} // 产品列表页。

@@ -1,0 +1,15 @@
+<div class="main">
+  <div class="ad-container" *ngIf="ad$ | async as ad">
+    <img [src]="ad.imageUrl" alt="" class="ad-image" />
+  </div>
+  <div class="box">
+    <app-vertical-grid [itemWidth]="'10rem'" [itemHeight]="'10rem'" [gridGap]="'7px'">
+      <!-- // 6-5 ⑥ 6-5 创建垂直网格组件 -->
+      <!-- // 6-6 6-7 产品组件卡片 ; [product]="product"  [product]是 product-card 组件里的;  "product"这个是这里循环的 product  -->
+      <app-product-tile *ngFor="let product of products$ | async; let index = index" [product]="product"
+        [routerLink]="['/products', product.id]">
+      </app-product-tile>
+
+    </app-vertical-grid>
+  </div>
+</div>

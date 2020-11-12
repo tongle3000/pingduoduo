@@ -1,0 +1,53 @@
+/* :host {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+} */
+
+.gridmenu {
+  background-color: transparent;
+  display: grid;
+  place-content: stretch;
+  place-items: center;
+  grid-gap: 0.4rem;
+  grid-auto-flow: row;
+  padding: 10px 0;
+  margin: 0 0.6rem;
+}
+
+/* 
+::-webkit-scroll-thumb {
+  background-color: #fff;
+}
+
+.underline {
+  background-color: #eee;
+  width: 4rem;
+  height: 0.2rem;
+  margin: 0 auto;
+}
+
+.highlight {
+  background-color: red;
+  width: 2.5rem;
+  height: 0.2rem;
+} */
+
+.underline {
+  height: 4px;
+  background-color: #e3e3e3;
+  margin: 0 auto 10px;
+  border-radius: 2px;
+}
+
+.underline>.highlight {
+  height: 4px;
+  background-color: #e02f29;
+  padding: 0;
+  border-radius: 2px;
+}
+
+/* 去除 chrom 下滚动条 */
+.gridmenu::-webkit-scrollbar {
+  display: none !important;
+}

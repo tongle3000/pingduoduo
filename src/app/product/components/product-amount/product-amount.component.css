@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+}
+
+.button {
+  background-color: lightgray;
+  padding: 2px 7px;
+
+}
+
+/* . button img {} */
+
+.count {
+  margin: 0 0.5rem;
+  width: 2rem;
+  text-align: center;
+}

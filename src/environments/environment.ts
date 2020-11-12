@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: 'http://apis.imooc.com/api', // 5-4 httpClient 增加这句.
+  icode: 'xxxx' // 5-4 httpClient 增加这句.
 };
 
 /*

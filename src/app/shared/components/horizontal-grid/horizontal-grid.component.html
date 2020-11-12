@@ -1,0 +1,51 @@
+<div>
+
+  <div class="gridmenu touch-scroll" [ngStyle]="{
+    'grid-template-rows': templateRows, 
+    'grid-template-columns': templateColumns
+  }" (scroll)="handleScroll($event)">
+
+
+    <!-- 
+      ------- 001 方法 写在组件里 ------
+      channels  用的是 horizontal-grid.component.ts文件里的数据
+      杀鸡用牛刀, 用自建 指令 写一下. 
+      指令所在的元素叫宿主. 它需要寄宿在标签上.
+      <img [src]="item.icon" alt="" appGridItemIcon /> 不改变值时,直接用 appGridItemIcon 指令.
+      <img [src]="item.icon" alt="" [appGridItemIcon]="'3rem'" [objectFitMode]="'none'" /> 
+      <span appGridItemTitle>{{ item.title }}</span>
+    
+    <div appGridItem *ngFor="let item of channels">
+      <img [src]="item.icon" alt="" [appGridItemIcon]="'2rem'" />
+      <span [appGridItemTitle]="'0.5rem'">{{ item.title }}</span>
+    </div>
+    -->
+
+    <!-- 
+      ---------- 002 方法,用投影组件 ng-content (其他代码写在了app.component.html页面里)----------
+      4-5 投影组件 
+      channels2  用的是 app.component.ts 文件里的数据 
+      select="span"  select选择显示,没有的话,不显示
+      select=".special" 只显示定义了这个样式名的 这块代码.
+      select=[appGridItem]  只显示带有这个指令的代码
+    -->
+    <ng-content select=[appGridItem]></ng-content>
+    <!-- 
+      全显示
+      <ng-content></ng-content>
+
+      只显示带有 appGridItem 指令的代码
+      <ng-content select=[appGridItem]></ng-content>
+
+      只显示定义了这个样式名 special 的这块代码
+      <ng-content select=".special"></ng-content> 
+    -->
+    <!-- 在模板这边需要指示区域, 就是拖动下面有条细线的 -->
+  </div>
+
+  <div class="underline" *ngIf="scrollable" [ngStyle]="{'width': underlineWidth}">
+    <div class="highlight" [ngStyle]="{'margin': sliderMargin, 'width':sliderWidth}"></div>
+  </div>
+
+
+</div>

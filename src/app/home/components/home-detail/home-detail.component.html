@@ -1,0 +1,101 @@
+<!-- // 6-4 7 rxjs 广告为 -->
+
+<ng-container *ngIf="(selectedTabLink$ | async) as tab">
+
+  <ng-container *ngIf="tab === 'hot' else other">
+    <app-images-slider [sliders]="imagesSliders$ | async"></app-images-slider>
+
+    <app-horizontal-grid underlineWidth="4rem">
+      <div appGridItem *ngFor="let item of channels$ | async">
+        <img [src]="item.icon" alt="" [appGridItemIcon]="'2rem'" />
+        <span [appGridItemTitle]="'0.5rem'">{{ item.title }}</span>
+      </div>
+    </app-horizontal-grid>
+
+    <div class="ad-container" *ngIf="ad$ | async as ad">
+      <img [src]="ad.imageUrl" alt="" class="ad-image" />
+    </div>
+
+    <app-vertical-grid [itemWidth]="'20rem'" [itemHeight]="'20rem'" [gridGap]="'7px'">
+      <!-- // 6-5 ⑥ 6-5 创建垂直网格组件 -->
+      <!-- // 6-6 6-7 产品组件卡片 ; [product]="product"  [product]是 product-card 组件里的;  "product"这个是这里循环的 product  -->
+      <app-product-card *ngFor="let product of products$ | async; let index = index" [product]="product"
+        [routerLink]="['/products', product.id]" [isBottom]="index + 1 === (products$ | async).length">
+      </app-product-card>
+    </app-vertical-grid>
+
+  </ng-container>
+
+
+  <ng-template #other>
+    <div class="ad-container" *ngIf="ad$ | async as ad">
+      <img [src]="ad.imageUrl" alt="" class="ad-image" />
+    </div>
+    <div class="box">
+      <app-vertical-grid [itemWidth]="'10rem'" [itemHeight]="'10rem'" [gridGap]="'7px'">
+        <!-- // 6-5 ⑥ 6-5 创建垂直网格组件 -->
+        <!-- // 6-6 6-7 产品组件卡片 ; [product]="product"  [product]是 product-card 组件里的;  "product"这个是这里循环的 product  -->
+        <app-product-tile *ngFor="let product of products$ | async; let index = index" [product]="product"
+          [routerLink]="['/products', product.id]">
+        </app-product-tile>
+
+      </app-vertical-grid>
+    </div>
+  </ng-template>
+
+</ng-container>
+
+
+
+<!-- <div *ngIf="(selectedTabLink$ | async) === 'hot' else other">
+
+  <app-images-slider [sliders]="imagesSliders$ | async"></app-images-slider>
+
+  <app-horizontal-grid underlineWidth="4rem">
+    <div appGridItem *ngFor="let item of channels$ | async">
+      <img [src]="item.icon" alt="" [appGridItemIcon]="'2rem'" />
+      <span [appGridItemTitle]="'0.5rem'">{{ item.title }}</span>
+    </div>
+  </app-horizontal-grid>
+
+</div>
+
+<ng-template #other>
+  Other Works!
+</ng-template> -->
+
+
+
+
+
+
+<!-- 这条是引入详情的子组件 home-grand.component -->
+<!-- <a [routerLink]="['/${route-link}']">$route-text</a> -->
+
+<div class="box">
+  <!-- /change-detection 链接到的是 parent 组件 (因为不是 home-detail 子组件,所以链接加上'/') -->
+  <a [routerLink]="['/parent']">routerLink to grand</a>------
+  <a [routerLink]="['grand']" routerLinkActive="active">routerLink active</a>
+  <router-outlet></router-outlet>
+</div>
+
+
+<!-- 下面没路由判断之前的代码
+
+3-4 #imagesSlider 
+<app-images-slider [sliders]="imagesSliders" #imagesSlider></app-images-slider>
+
+
+underlineWidth 滚动条长度可任意改 
+<app-horizontal-grid underlineWidth="6rem">
+4-5 投影组件  
+  <div appGridItem *ngFor="let item of channels2">
+    <img [src]="item.icon" alt="" [appGridItemIcon]="'2rem'" />
+    <span [appGridItemTitle]="'0.5rem'"> item.title</span>
+  </div>
+ <div class="special">
+    <div [appGridItemIcon]="'2rem'" style="background-color: red;">一个</div>
+    <span appGridItemTitle="0.5rem">ngcontent</span>
+  </div> 
+</app-horizontal-grid>
+-->

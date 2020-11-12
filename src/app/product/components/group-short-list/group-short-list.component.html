@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="title">
+    <span>{{ groupOrders.length }}人在拼单,可直接参与</span>
+    <span class="jt">→</span>
+  </div>
+  <div class="group-item">
+    <app-group-item *ngFor="let item of groupOrders" [order]="item"></app-group-item>
+  </div>
+</div>

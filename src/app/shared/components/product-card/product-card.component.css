@@ -1,0 +1,102 @@
+:host {
+  padding: 0 0.5rem;
+  background-color: transparent;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  /* 左边图片10rem 右边占满 */
+  grid-template-rows: 3rem 1fr 1rem 2rem 1px;
+  /* 第二行占满 其他是 3 1 2 */
+  grid-row-gap: 5px;
+  grid-column-gap: 10px;
+  /* 网格间 的间隙 */
+  grid-template-areas:
+    'image title'
+    /* 第一行 左图 右标题 */
+    'image .'
+    /* 第一行 左图 右站位 */
+    'image tags'
+    /* 第一行 左图 右标签 */
+    'image price'
+    '. underline';
+  /* 第一行 左图 右价格块 */
+  place-content: stretch;
+  place-items: stretch;
+}
+
+.product-image {
+  grid-area: image;
+  object-fit: cover;
+  width: 9rem;
+  height: 9rem;
+  overflow: hidden;
+}
+
+.product-title {
+  grid-area: title;
+}
+
+.product-tags {
+  grid-area: tags;
+}
+
+.product-tags>span {
+  margin-right: 5px;
+}
+
+.product-underline {
+  grid-area: underline;
+  border-bottom: 1px solid #eee;
+}
+
+.border-none {
+  border-bottom: 0;
+}
+
+.product-price {
+  grid-area: price;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 3rem 1fr 2.6rem;
+  grid-template-areas: 'price-detail price-desc price-avatar';
+  place-content: stretch;
+  place-items: center start;
+  /* padding-bottom: 5px; */
+
+}
+
+.price-detail {
+  grid-area: price-detail;
+  color: #e02f29;
+}
+
+.price-desc {
+  grid-area: price-desc;
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.price-avatar {
+  grid-area: price-avatar;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-content: stretch;
+  place-items: center end;
+
+}
+
+.price-avatar img {
+  width: 28px;
+}
+
+.price-avatar img:last-child {
+  margin-left: -0.6rem;
+}
+
+.price {
+  display: inline;
+  font-size: 1.3rem;
+  font-weight: normal;
+}

@@ -1,0 +1,71 @@
+:host {
+  background-color: transparent;
+}
+
+.container {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: repeat(auto-fill, minmax(11rem, 1fr));
+  /* 第二行占满 其他是 3 1 2 */
+  grid-row-gap: 5px;
+  place-content: stretch;
+  place-items: start;
+}
+
+.product-image {
+  object-fit: cover;
+  width: 100%;
+  height: 11rem;
+}
+
+.product-title {
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+.product-tags>span {
+  margin-right: 5px;
+}
+
+
+
+.product-price {
+  width: 100%;
+  display: grid;
+  grid-column-gap: 5px;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: 'price-detail price-desc price-avatar';
+  place-content: stretch;
+  place-items: center start;
+  /* padding-bottom: 5px; */
+
+}
+
+.price-detail {
+  grid-area: price-detail;
+  color: #e02f29;
+}
+
+.price-desc {
+  grid-area: price-desc;
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.price-avatar {
+  grid-area: price-avatar;
+}
+
+.price-avatar img {
+  float: left;
+}
+
+.price-avatar img:first-child {
+  margin-right: -0.6rem;
+}
+
+.price {
+  display: inline;
+  font-size: 1rem;
+  font-weight: 500;
+}

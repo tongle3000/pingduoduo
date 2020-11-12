@@ -1,0 +1,42 @@
+ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  /* 默认 就这个值 ;cloumn 竖排；row-reverse倒序排，最后一个排最前面 */
+}
+
+ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+a {
+  text-decoration: none;
+  padding: 6px 0;
+  margin: 0 10px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.active {
+  color: red;
+}
+
+.first {
+  color: green;
+}
+
+.indicator {
+  background-color: red;
+  height: 2px;
+  width: 2rem;
+  margin-top: 2px;
+}

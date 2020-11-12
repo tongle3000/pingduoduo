@@ -1,0 +1,29 @@
+<div class="box">
+  <p>
+    {{ obj | json }}
+  </p>
+  <p>
+    {{ date | date: 'MM-dd' }}
+  </p>
+
+
+  <p>
+    {{ price | currency: 'CNY' }}
+  </p>
+  <p>
+    {{ price | currency: 'CNY': 'symbol': '4.0-2' }} (小数点前,最少 4 位数)
+  </p>
+  <p>
+    {{ price2 | currency: 'CNY': 'symbol': '4.0-2' }} (小数点后,最少 0 到 2 位小数.)
+  </p>
+
+  <!-- 这个 data slice 不起作用 -->
+  <p>{{ data | slice: 3}}m</p>
+
+
+
+  <!-- 自定义管道 appAgo -->
+  <p>
+    {{ date2 | appAgo }}
+  </p>
+</div>

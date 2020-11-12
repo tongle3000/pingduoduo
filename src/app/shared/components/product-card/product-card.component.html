@@ -1,0 +1,26 @@
+<div class="container">
+  <img [src]="product.imageUrl" alt="" class="product-image">
+  <div class="product-title">
+    {{ product.title }}
+  </div>
+  <div class="product-tags">
+    <span appTag *ngFor="let tag of product.tags">
+      {{ tag }}
+    </span>
+  </div>
+  <div class="product-price">
+    <span class="price-detail">
+      <span>&yen;</span>
+      <h3 class="price">{{ product.price }}</h3>
+    </span>
+    <span class="price-desc">
+      {{ product.priceDesc }}
+    </span>
+    <span class="price-avatar">
+      <img appAvatar *ngFor="let avatar of product.buyerAvatars" [src]="avatar" />
+    </span>
+  </div>
+  <!-- [isBottom]="index + 1 === (products$ | async).length" -->
+  <!-- 这里是判断是不是最后一个,,最后一个, 低边框为 0 -->
+  <div [ngClass]="isBottom ? 'product-underline border-none' : 'product-underline'"></div>
+</div>

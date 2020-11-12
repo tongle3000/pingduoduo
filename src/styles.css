@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body,
+app-root {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 16px;
+  height: 100%;
+}
+
+button {
+  border: 0;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.box {
+  padding: 0.5rem;
+}
+
+.touch-scroll {
+  /* 触摸滚动 */
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}

@@ -1,0 +1,26 @@
+<div class="subfooter">
+  <div class="menus">
+    <!-- <app-horizontal-grid [cols]="3" [displayCols]="3"> -->
+    <div appGridItem *ngFor="let item of productFooterBtns; let idx=index">
+      <img [src]="item.icon" alt="{{item.title}}" [appGridItemIcon]="'1.3rem'" />
+      <span [appGridItemTitle]="'0.5rem'">{{ item.title }}</span>
+    </div>
+    <!-- </app-horizontal-grid> -->
+  </div>
+
+  <div class="btns" *ngIf="variants$ | async as productVariants">
+    <div class="btn" appButton (click)="handleDirectBuy(productVariants)" btnHeight="3.5rem" btnLineHeight="1.5rem"
+      btnBgColor="#999">
+      <span class="price">{{ productVariants[selectedIndex].listPrice | currency: 'CNY' }}</span>
+      <span class="buy">直接购买</span>
+    </div>
+
+    <div (click)="handleGroupBuy(productVariants)" class="btn" appButton btnHeight="3.5rem" btnLineHeight="1.5rem">
+      <span class="price">{{ productVariants[selectedIndex].price | currency: 'CNY'  }}</span>
+      <span class="buy">发起拼单</span>
+    </div>
+
+  </div>
+</div>
+
+<!--  *ngIf="variants$ | async as productVariants -->
