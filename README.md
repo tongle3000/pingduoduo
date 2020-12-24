@@ -1,4 +1,4 @@
-有 mock 数据，clone后可直接运行。
+有 mock 数据，clone 安装环境后可直接运行。
 
 
 # Pingduoduo
