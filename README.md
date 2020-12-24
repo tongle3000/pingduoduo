@@ -1,3 +1,6 @@
+有 mock 数据，clone后可直接运行。
+
+
 # Pingduoduo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
